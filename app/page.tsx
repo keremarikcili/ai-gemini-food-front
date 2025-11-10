@@ -17,7 +17,7 @@ export default function App() {
 
   const fileInputRef = useRef(null);
   const chatBoxRef = useRef(null);
-  const API_URL = "http://127.0.0.1:9000/ara";
+  //const API_URL = "http://127.0.0.1:9000/ara";
   
 
   useEffect(() => {
@@ -59,7 +59,7 @@ export default function App() {
       images: selectedImages.map(img => img.previewUrl)
     };
     setMessages(prev => [...prev, userMessage]);
-
+    const API_URL = "https://ai-gemini-food-back-1.onrender.com/ara"; 
     const formData = new FormData();
     formData.append("prompt", trimmedPrompt);
     selectedImages.forEach(img => formData.append("image", img.file));
@@ -198,5 +198,3 @@ export default function App() {
 
 
 
-
-// AIzaSyC2QuojBfhcjIsooviAeVVkmhugfdZrlQc
