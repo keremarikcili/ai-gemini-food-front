@@ -108,7 +108,7 @@ export default function App() {
       setIsLoading(false);
       setPrompt("");
       setSelectedImages([]);
-      if (fileInputRef.current) fileInputRef.current.value = null;
+      if (fileInputRef.current) fileInputRef.current.value = "";
     }
   };
 
